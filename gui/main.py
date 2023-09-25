@@ -2,6 +2,8 @@ from PyQt5 import QtWidgets
 from calibration_main import Ui_MainWindow
 from camera_module import CameraModule
 from result_module import ResultModule
+from control_module import ControlModule
+
 
 
 
@@ -10,8 +12,10 @@ class MainWindowApp(QtWidgets.QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.state = 0
 
         self.camera_module = CameraModule(self.ui.label_camera)
+        self.state_controller = ControlModule(self.ui)
         self.result_module = ResultModule(self.ui.textBrowser_result, self.ui.pushButton_save)
 
     def closeEvent(self, event):

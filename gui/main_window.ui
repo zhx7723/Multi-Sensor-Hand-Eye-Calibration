@@ -304,7 +304,7 @@
             </font>
            </property>
            <property name="text">
-            <string>PROCESSING...</string>
+            <string>Ready to Config</string>
            </property>
           </widget>
          </item>

@@ -238,6 +238,6 @@ class Ui_MainWindow(object):
         self.pushButton_continue.setText(_translate("MainWindow", "CONTINUE"))
         self.groupBox_progress.setTitle(_translate("MainWindow", "PROGRESS"))
         self.groupBox_state.setTitle(_translate("MainWindow", "STATE"))
-        self.label_state.setText(_translate("MainWindow", "PROCESSING..."))
+        self.label_state.setText(_translate("MainWindow", "Ready to Config"))
         self.groupBox_result.setTitle(_translate("MainWindow", "RESULT"))
         self.pushButton_save.setText(_translate("MainWindow", "Save As..."))
