@@ -22,6 +22,13 @@ class ControlModule:
         QMessageBox.information(self.ui.pushButton_camera_config, "Configuration", "This is config page")
 
     def handle_start_button(self):
+        # check lineEdit_position
+        text_value = self.ui.lineEdit_position.text().strip()  # Use strip() to remove possible leading and trailing spaces
+
+        if not text_value:
+            QMessageBox.warning(self.ui.pushButton_start, "Warning", "Please enter a number in the Position Number text box!")
+            return
+
         self.ui.label_state.setText("Calibrating")
         self.ui.pushButton_start.setEnabled(False)
         self.ui.pushButton_stop.setEnabled(True)

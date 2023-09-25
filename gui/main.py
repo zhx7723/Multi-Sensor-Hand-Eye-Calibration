@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets
-from calibration_main import Ui_MainWindow
+from main_window import Ui_MainWindow
 from camera_module import CameraModule
 from result_module import ResultModule
 from control_module import ControlModule
