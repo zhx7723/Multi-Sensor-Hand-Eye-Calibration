@@ -12,14 +12,14 @@ class MainWindowApp(QtWidgets.QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        self.state = 0
+        self.initUI()
 
-        self.camera_module = CameraModule(self.ui.label_camera)
+    def initUI(self):
         self.state_controller = ControlModule(self.ui)
-        self.result_module = ResultModule(self.ui.textBrowser_result, self.ui.pushButton_save)
+
 
     def closeEvent(self, event):
-        self.camera_module.stop()
+        self.state_controller.stop_camera()
         event.accept()
 
 
@@ -27,10 +27,4 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication([])
     window = MainWindowApp()
     window.show()
-
-    # For test
-    window.result_module.update_result("X: \n[[0.1, 0.1, 0.1],\n[0.1, 0.1, 0.1],\n[0.1, 0.1, 0.1]]\n\n"
-                                       "Y: \n[[0.1, 0.1, 0.1],\n[0.1, 0.1, 0.1],\n[0.1, 0.1, 0.1]]\n\n"
-                                       "Z: \n[[0.1, 0.1, 0.1],\n[0.1, 0.1, 0.1],\n[0.1, 0.1, 0.1]]")
-
     app.exec_()
