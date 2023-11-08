@@ -365,7 +365,7 @@ class ControlModule:
         self.RDK = robolink.Robolink()
         self.dir_path = os.path.realpath(os.path.dirname(__file__))
         self.camera_module = CameraModule(self.ui.label_camera, self.RDK, self.dir_path)
-        self.result_module = ResultModule(self.ui.textBrowser_result, self.ui.pushButton_save, self.ui.pushButton_clear)
+        self.result_module = ResultModule(self.ui)
 
         self.thread = None
 
