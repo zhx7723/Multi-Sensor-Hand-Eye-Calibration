@@ -17,7 +17,6 @@ class MainWindowApp(QtWidgets.QMainWindow):
     def initUI(self):
         self.state_controller = ControlModule(self.ui)
 
-
     def closeEvent(self, event):
         self.state_controller.stop_camera()
         event.accept()

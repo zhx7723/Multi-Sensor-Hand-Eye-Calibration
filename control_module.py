@@ -350,7 +350,7 @@ class LoopThread(QThread):
         # The homogenous transformation matrix can now be obtained from Rz and tz
         Z = np.vstack((np.hstack((Rz, tz)), np.array([0, 0, 0, 1])))
 
-        results = f"=The completion time of the calibration: {time_str}---------\n"
+        results = f"The completion time of the calibration: {time_str}---------\n"
         results += f"The tansformation of TCP to Camera, X:\n {X}\n"
         results += f"The tansformation of TCP to Camera, Y:\n {Y}\n"
         results += f"The tansformation of TCP to Camera, Z:\n {Z}\n"
@@ -365,10 +365,9 @@ class ControlModule:
         self.RDK = robolink.Robolink()
         self.dir_path = os.path.realpath(os.path.dirname(__file__))
         self.camera_module = CameraModule(self.ui.label_camera, self.RDK, self.dir_path)
-        self.result_module = ResultModule(self.ui.textBrowser_result, self.ui.pushButton_save)
+        self.result_module = ResultModule(self.ui.textBrowser_result, self.ui.pushButton_save, self.ui.pushButton_clear)
 
-        self.thread = LoopThread(self.RDK, self.camera_module, self.dir_path)
-        self.thread.finished.connect(self.on_thread_finished)
+        self.thread = None
 
         self.ui.pushButton_camera_config.clicked.connect(self.handle_config_button)
         self.ui.pushButton_start.clicked.connect(self.handle_start_button)
@@ -395,6 +394,8 @@ class ControlModule:
         #     QMessageBox.warning(self.ui.pushButton_start, "Warning",
         #         "Please enter a number in the Position Number text box!")
         #     return
+        self.thread = LoopThread(self.RDK, self.camera_module, self.dir_path)
+        self.thread.finished.connect(self.on_thread_finished)
         self.thread.update_signal.connect(self.ui.progressBar.setValue)
         self.thread.start()
         self.thread.update_result.connect(self.result_module.update_result)
@@ -423,6 +424,8 @@ class ControlModule:
     def on_thread_finished(self):
         self.ui.pushButton_start.setEnabled(True)
         self.ui.pushButton_stop.setEnabled(False)
+        self.thread.deleteLater()
+        self.thread = None
         self.ui.label_state.setText("Calibration Complete!")
 
     def stop_camera(self):

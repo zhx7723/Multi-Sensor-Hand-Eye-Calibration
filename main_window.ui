@@ -213,7 +213,7 @@
               </font>
              </property>
              <property name="text">
-              <string>STOP</string>
+              <string>Pause</string>
              </property>
             </widget>
            </item>
@@ -232,7 +232,7 @@
               </font>
              </property>
              <property name="text">
-              <string>CONTINUE</string>
+              <string>Resume</string>
              </property>
             </widget>
            </item>
@@ -328,22 +328,38 @@
         <widget class="QTextBrowser" name="textBrowser_result"/>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_save">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>14</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>Save As...</string>
-         </property>
-        </widget>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QPushButton" name="pushButton_clear">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Clear All</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_save">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Save As...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </widget>

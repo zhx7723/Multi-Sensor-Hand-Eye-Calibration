@@ -162,9 +162,6 @@ def calib_and_estimate_pose(chessboard_width,
 
     cv.destroyAllWindows()
 
-    # print("\nRotation Vectors2:\n", rvecs)
-    # print("\nTranslation Vectors2:\n", tvecs)
-
     return rvecs, tvecs
 
 # rvecs_camera, tvecs_camera = calib_and_estimate_pose(10, 7, 640, 480)
