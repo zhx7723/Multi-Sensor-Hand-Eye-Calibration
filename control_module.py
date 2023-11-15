@@ -369,7 +369,7 @@ class ControlModule:
 
         self.thread = None
 
-        self.ui.pushButton_camera_config.clicked.connect(self.handle_config_button)
+#         self.ui.pushButton_camera_config.clicked.connect(self.handle_config_button)
         self.ui.pushButton_start.clicked.connect(self.handle_start_button)
         self.ui.pushButton_stop.clicked.connect(self.handle_stop_button)
         self.ui.pushButton_continue.clicked.connect(self.handle_continue_button)
@@ -377,13 +377,6 @@ class ControlModule:
         self.ui.progressBar.setValue(0)
         self.ui.pushButton_stop.setEnabled(False)
         self.ui.pushButton_continue.setEnabled(False)
-    def handle_config_button(self):
-        self.ui.label_state.setText("Configuration Complete")
-
-        self.ui.pushButton_start.setEnabled(True)
-        self.ui.pushButton_stop.setEnabled(False)
-        self.ui.pushButton_continue.setEnabled(False)
-        QMessageBox.information(self.ui.pushButton_camera_config, "Configuration", "This is config page")
 
     def handle_start_button(self):
         # check lineEdit_position
@@ -401,17 +394,13 @@ class ControlModule:
         self.thread.update_result.connect(self.result_module.update_result)
 
         self.ui.label_state.setText("Calibrating")
-        self.ui.pushButton_start.setEnabled(False)
         self.ui.pushButton_stop.setEnabled(True)
-        self.ui.pushButton_camera_config.setEnabled(False)
 
     def handle_stop_button(self):
         self.thread.is_paused = True
-
         self.ui.label_state.setText("Calibration Stop")
         self.ui.pushButton_stop.setEnabled(False)
         self.ui.pushButton_continue.setEnabled(True)
-        self.ui.pushButton_camera_config.setEnabled(True)
 
     def handle_continue_button(self):
         self.thread.is_paused = False
@@ -419,7 +408,6 @@ class ControlModule:
         self.ui.label_state.setText("Calibrating")
         self.ui.pushButton_stop.setEnabled(True)
         self.ui.pushButton_continue.setEnabled(False)
-        self.ui.pushButton_camera_config.setEnabled(False)
 
     def on_thread_finished(self):
         self.ui.pushButton_start.setEnabled(True)
