@@ -40,7 +40,12 @@ class CameraModule:
     def __init__(self, label, RDK, dir_path):
         self.label = label
         self.dir_path = dir_path
-        self.camera_thread = CameraThread(RDK, 'cf_camera_rgb_324x244', dir_path)
+        self.RDK = RDK
+        self.dir_path = dir_path
+        self.camera_thread = None
+
+    def start(self):
+        self.camera_thread = CameraThread(self.RDK, 'cf_camera_rgb_324x244', self.dir_path)
         self.camera_thread.update_frame_signal.connect(self.update_frame)
         self.camera_thread.start()
 

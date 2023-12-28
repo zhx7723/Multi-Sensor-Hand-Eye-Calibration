@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>919</width>
-    <height>745</height>
+    <width>947</width>
+    <height>691</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,7 +16,7 @@
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout_8">
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="7,4">
+     <layout class="QHBoxLayout" name="horizontalLayout_13" stretch="7,0,4">
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_7">
         <item>
@@ -33,7 +33,7 @@
            </font>
           </property>
           <property name="title">
-           <string>CAMERA</string>
+           <string>Camera</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_3">
            <item>
@@ -53,7 +53,14 @@
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="7,3">
+         <widget class="Line" name="line_7">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_11" stretch="7">
           <item>
            <widget class="QGroupBox" name="groupBox_progress">
             <property name="font">
@@ -62,7 +69,7 @@
              </font>
             </property>
             <property name="title">
-             <string>PROGRESS</string>
+             <string>Progress</string>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_2">
              <item>
@@ -75,44 +82,120 @@
             </layout>
            </widget>
           </item>
-          <item>
-           <widget class="QGroupBox" name="groupBox_state">
-            <property name="font">
-             <font>
-              <pointsize>12</pointsize>
-             </font>
-            </property>
-            <property name="title">
-             <string>STATE</string>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_6">
+         </layout>
+        </item>
+        <item>
+         <widget class="Line" name="line_6">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_result">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>Result</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
-              <widget class="QLabel" name="label_state">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Ready to Config</string>
-               </property>
-              </widget>
+              <widget class="QTextBrowser" name="textBrowser_result"/>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout">
+               <item>
+                <spacer name="horizontalSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_clear">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Clear</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushButton_save">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Export</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_4">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
              </item>
             </layout>
-           </widget>
-          </item>
-         </layout>
+           </item>
+          </layout>
+         </widget>
         </item>
        </layout>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_6">
+       <widget class="Line" name="line_5">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_6" stretch="0,0,0,0,0,0,0,0,0">
         <item>
          <widget class="QGroupBox" name="groupBox">
           <property name="font">
@@ -125,11 +208,11 @@
           </property>
           <layout class="QVBoxLayout" name="verticalLayout">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="5,3,1">
+            <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="4,3,2">
              <item>
               <widget class="QLabel" name="label_2">
                <property name="text">
-                <string>Camera resolution</string>
+                <string>Camera resolution:</string>
                </property>
               </widget>
              </item>
@@ -153,7 +236,92 @@
                </item>
                <item>
                 <property name="text">
-                 <string>1024×980</string>
+                 <string>160×120</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>176×144</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>320×176</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>320×240</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>352×288</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>432×240</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>544×288</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>640×360</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>752×416</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>800×448</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>800×600</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>864×480</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>960×544</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>960×720</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>1024×576</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>1184×656</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>1280×720</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>1780×960</string>
                 </property>
                </item>
               </widget>
@@ -168,7 +336,7 @@
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="5,4">
+            <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="4,5">
              <item>
               <widget class="QLabel" name="label">
                <property name="sizePolicy">
@@ -183,12 +351,12 @@
                 </font>
                </property>
                <property name="text">
-                <string>Camera Index</string>
+                <string>Camera Index:</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="comboBox_camera">
+              <widget class="QComboBox" name="comboBox_camera_index">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                  <horstretch>0</horstretch>
@@ -284,6 +452,13 @@
          </widget>
         </item>
         <item>
+         <widget class="Line" name="line">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
          <widget class="QGroupBox" name="groupBox_2">
           <property name="font">
            <font>
@@ -295,7 +470,7 @@
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="7,3">
+            <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="6,5">
              <item>
               <widget class="QLabel" name="label_position">
                <property name="font">
@@ -304,26 +479,43 @@
                 </font>
                </property>
                <property name="text">
-                <string>Position number</string>
+                <string>Position number:</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="lineEdit_position">
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>24</string>
-               </property>
+              <widget class="QComboBox" name="comboBox_position_num">
+               <item>
+                <property name="text">
+                 <string>24</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>36</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>48</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>60</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>72</string>
+                </property>
+               </item>
               </widget>
              </item>
             </layout>
            </item>
            <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="7,3">
+            <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="9,3,1,3">
              <item>
               <widget class="QLabel" name="label_charuco">
                <property name="font">
@@ -331,33 +523,85 @@
                  <pointsize>12</pointsize>
                 </font>
                </property>
+               <property name="toolTip">
+                <string notr="true" comment="width"/>
+               </property>
                <property name="text">
-                <string>Charuco Board Type</string>
+                <string>Checker board size:</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QComboBox" name="comboBox_charuco">
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
+              <widget class="QLineEdit" name="lineEdit_width">
+               <property name="toolTip">
+                <string comment="width" extracomment="width"/>
                </property>
-               <item>
-                <property name="text">
-                 <string>8×8</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>4×6</string>
-                </property>
-               </item>
+               <property name="statusTip">
+                <string comment="width"/>
+               </property>
+               <property name="whatsThis">
+                <string>width</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>width</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="text">
+                <string>×</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_height">
+               <property name="text">
+                <string/>
+               </property>
+               <property name="placeholderText">
+                <string>height</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="6,4,1">
+             <item>
+              <widget class="QLabel" name="label_4">
+               <property name="text">
+                <string>Square size:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_square_size">
+               <property name="text">
+                <string>20</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_5">
+               <property name="text">
+                <string>mm</string>
+               </property>
               </widget>
              </item>
             </layout>
            </item>
           </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
          </widget>
         </item>
         <item>
@@ -370,7 +614,7 @@
           <property name="title">
            <string>Calibration control</string>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <layout class="QHBoxLayout" name="horizontalLayout_10" stretch="0,0,0">
            <property name="topMargin">
             <number>20</number>
            </property>
@@ -384,6 +628,12 @@
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>107</width>
+               <height>54</height>
+              </size>
              </property>
              <property name="font">
               <font>
@@ -404,6 +654,12 @@
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="maximumSize">
+              <size>
+               <width>107</width>
+               <height>54</height>
+              </size>
+             </property>
              <property name="font">
               <font>
                <pointsize>12</pointsize>
@@ -423,6 +679,12 @@
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
+             <property name="maximumSize">
+              <size>
+               <width>107</width>
+               <height>54</height>
+              </size>
+             </property>
              <property name="font">
               <font>
                <pointsize>12</pointsize>
@@ -437,122 +699,77 @@
           </layout>
          </widget>
         </item>
-       </layout>
-      </item>
-     </layout>
-    </item>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_14">
-      <item>
-       <widget class="QGroupBox" name="groupBox_result">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="title">
-         <string>Result</string>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_9">
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="Line" name="line_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_3">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="locale">
+           <locale language="English" country="UnitedStates"/>
+          </property>
+          <property name="title">
+           <string>Graphs &amp;&amp; Images</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_12">
            <item>
-            <widget class="QTextBrowser" name="textBrowser_result"/>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout">
-             <item>
-              <spacer name="horizontalSpacer_3">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_clear">
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Clear</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QPushButton" name="pushButton_save">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Export</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_4">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-            </layout>
+            <widget class="QLabel" name="label_graph">
+             <property name="text">
+              <string>Graphs &amp; Images shown here</string>
+             </property>
+            </widget>
            </item>
           </layout>
-         </item>
-        </layout>
-       </widget>
-      </item>
-      <item>
-       <widget class="QGroupBox" name="groupBox_3">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="title">
-         <string>Graph</string>
-        </property>
-        <layout class="QHBoxLayout" name="horizontalLayout_12">
-         <item>
-          <widget class="QGraphicsView" name="graphicsView"/>
-         </item>
-        </layout>
-       </widget>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_state">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>State</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_state">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>12</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>Ready to Config</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
@@ -564,7 +781,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>919</width>
+     <width>947</width>
      <height>22</height>
     </rect>
    </property>
